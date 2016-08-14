@@ -5,4 +5,5 @@ docs_dir: .
 repo_url: https://github.com/wangliang1989/oh-my-cap
 
 pages:
-- Introduction: index.md
+- 简介: index.md
+- 安装: install.md
