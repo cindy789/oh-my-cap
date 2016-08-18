@@ -49,6 +49,36 @@
             "location": "/install/#_1",
             "text": "\u9700\u8981\u4e3a fk\u3001pssac \u548c gcap \u6dfb\u52a0\u73af\u5883\u53d8\u91cf\u3002\u5c06\u4ee5\u4e0b\u5185\u5bb9\u52a0\u5165\u73af\u5883\u53d8\u91cf\u4e2d:  export OH_MY_CAP=/path/to/oh-my-cap\n# =\u53f7\u540e\u9762\u7684\u5185\u5bb9\u5e94\u8be5\u6362\u6210oh-my-cap\u5b9e\u9645\u7684\u8def\u5f84!\nexport PATH=${PATH}:$OH_MY_CAP/src/fk\nexport PATH=${PATH}:$OH_MY_CAP/src/pssac\nexport PATH=${PATH}:$OH_MY_CAP/src/gcap",
             "title": "\u6dfb\u52a0\u73af\u5883\u53d8\u91cf"
+        },
+        {
+            "location": "/preprocess/",
+            "text": "\u6570\u636e\u9884\u5904\u7406",
+            "title": "\u6570\u636e\u9884\u5904\u7406"
+        },
+        {
+            "location": "/preprocess/#_1",
+            "text": "",
+            "title": "\u6570\u636e\u9884\u5904\u7406"
+        },
+        {
+            "location": "/green/",
+            "text": "\u8ba1\u7b97\u683c\u6797\u51fd\u6570",
+            "title": "\u8ba1\u7b97\u683c\u6797\u51fd\u6570"
+        },
+        {
+            "location": "/green/#_1",
+            "text": "",
+            "title": "\u8ba1\u7b97\u683c\u6797\u51fd\u6570"
+        },
+        {
+            "location": "/inversion/",
+            "text": "CAP \u53cd\u6f14",
+            "title": "\u53cd\u6f14"
+        },
+        {
+            "location": "/inversion/#cap",
+            "text": "",
+            "title": "CAP \u53cd\u6f14"
         }
     ]
 }
