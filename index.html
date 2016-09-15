@@ -15,14 +15,6 @@
         <link href="./css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="./css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="./css/highlight.css">
-        <link href="./site/css/base.css" rel="stylesheet">
-        <link href="./site/css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./site/css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="./site/css/highlight.css" rel="stylesheet">
-        <link href="./site/site/css/base.css" rel="stylesheet">
-        <link href="./site/site/css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./site/site/css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="./site/site/css/highlight.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -142,6 +134,10 @@
     
         <li class="main active"><a href="#oh-my-cap">Oh My CAP</a></li>
         
+            <li><a href="#cap">CAP 程序简介</a></li>
+        
+            <li><a href="#oh-my-cap_1">Oh My CAP是什么？</a></li>
+        
             <li><a href="#_1">参考文献</a></li>
         
     
@@ -150,6 +146,25 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="oh-my-cap">Oh My CAP</h1>
+<h2 id="cap">CAP 程序简介</h2>
+<p>CAP 是用地震波形记录反演震源机制解的著名程序，主要由朱露培教授发展和实现。
+CAP 有不同的版本：CAP、gCAP 和 gCAP 3D。CAP 大约是在本世纪初研发的，朱露培教授并未在网络上正式开源 CAP 程序。
+相较 CAP，gCAP 的主要改进是 gCAP 可以得到矩张量解，前者则是双力偶模型。gCAP 已经正式在网络上开源。
+gCAP 3D 相比 gCAP 的区别是可用三维模型计算的格林函数。gCAP 3D已经正式在网络上开源。</p>
+<h2 id="oh-my-cap_1">Oh My CAP是什么？</h2>
+<p>CAP是计算震源机制的一种非常好的方法。很多地震学同行都需要学习、使用和研究它。
+然而以下情况阻碍了大家：</p>
+<ol>
+<li>CAP 的安装真的并不容易。</li>
+<li>因为各种原因，大家拿到 CAP 源文件往往不是通过朱露培教授的官网，而是熟人关系。这导致使用的程序很可能彼此不一样，甚至是经过了较大改动的，而且做了哪些改动又不得而知。</li>
+<li>从最初的 sac 文件或者 seed 文件开始，怎样正确处理数据到计算格林函数再到最后的反演，需要摸索，而学习者可能连 sac 都是初学。</li>
+</ol>
+<p>要迈过了上面的坑，需要学习者自己摸索，或者请人帮助。为了解决这些问题，我们建立了 Oh My CAP 这个开源项目，以提供一个学习和探讨 CAP 的平台。
+目前，我们打算在这里向大家提供：</p>
+<ol>
+<li>一个更好安装的 CAP 和安装指南(目前，我们使用gCAP，未来希望能加入 gCAP 3D)</li>
+<li>如何正确处理数据到最后的如何反演的例子和配套的说明教程</li>
+</ol>
 <h2 id="_1">参考文献</h2>
 <ol>
 <li>Zhu, L., and D. V. Helmberger, 1996, Advancements in source estimation techniques using broadband regional seismograms. <em>BSSA</em>, 86, 1634-1641. (78)</li>
@@ -170,24 +185,6 @@
         <script>var base_url = '.';</script>
         <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
         <script src="./js/base.js"></script>
-        <script src="./site/js/base.js"></script>
-        <script src="./site/js/bootstrap-3.0.3.min.js"></script>
-        <script src="./site/js/highlight.pack.js"></script>
-        <script src="./site/js/jquery-1.10.2.min.js"></script>
-        <script src="./site/mkdocs/js/lunr-0.5.7.min.js"></script>
-        <script src="./site/mkdocs/js/mustache.min.js"></script>
-        <script src="./site/mkdocs/js/require.js"></script>
-        <script src="./site/mkdocs/js/search.js"></script>
-        <script src="./site/mkdocs/js/text.js"></script>
-        <script src="./site/site/js/base.js"></script>
-        <script src="./site/site/js/bootstrap-3.0.3.min.js"></script>
-        <script src="./site/site/js/highlight.pack.js"></script>
-        <script src="./site/site/js/jquery-1.10.2.min.js"></script>
-        <script src="./site/site/mkdocs/js/lunr-0.5.7.min.js"></script>
-        <script src="./site/site/mkdocs/js/mustache.min.js"></script>
-        <script src="./site/site/mkdocs/js/require.js"></script>
-        <script src="./site/site/mkdocs/js/search.js"></script>
-        <script src="./site/site/mkdocs/js/text.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
             <div class="modal-dialog">
@@ -219,5 +216,5 @@
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2016-08-18 06:20:28.785117
+Build Date UTC : 2016-09-15 04:35:21.119324
 -->
