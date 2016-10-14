@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="wangliang1989">
+        <link rel="canonical" href="https://wangliang1989.github.com/oh-my-cap/preprocess/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+	<title>数据预处理 - Oh My CAP</title>
+
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../site/css/base.css" rel="stylesheet">
+        <link href="../site/css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../site/css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../site/css/highlight.css" rel="stylesheet">
+        <link href="../site/site/css/base.css" rel="stylesheet">
+        <link href="../site/site/css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../site/site/css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../site/site/css/highlight.css" rel="stylesheet">
+        <link href="../site/site/site/css/base.css" rel="stylesheet">
+        <link href="../site/site/site/css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../site/site/site/css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../site/site/site/css/highlight.css" rel="stylesheet">
+        <link href="../site/site/site/site/css/base.css" rel="stylesheet">
+        <link href="../site/site/site/site/css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../site/site/site/site/css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../site/site/site/site/css/highlight.css" rel="stylesheet">
+        <link href="../site/site/site/site/site/css/base.css" rel="stylesheet">
+        <link href="../site/site/site/site/site/css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../site/site/site/site/site/css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../site/site/site/site/site/css/highlight.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">Oh My CAP</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">简介</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../install/">安装</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../quick-start/">快速开始</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">流程 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../intro-to-procedures/">流程简介</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gflib/">计算格林函数</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">数据预处理</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../inversion/">反演</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../parameter/">反演参数</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">其他 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../compare/">代码差异</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../FAQs/">FAQ</a>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../gflib/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../inversion/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/wangliang1989/oh-my-cap">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#_1">数据预处理</a></li>
+        
+            <li><a href="#_2">数据来源</a></li>
+        
+            <li><a href="#_3">数据的处理</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="_1">数据预处理</h1>
+<h2 id="_2">数据来源</h2>
+<p>我们的例子事件在 IRIS 上的事件编号是 2725882。事件信息为： 2008 年 4 月 18 日 9 时 36 分 58 秒，震中北纬 38.4584 度，西经 87.8398度，震源深度 15.8 公里，震级 5.4。</p>
+<p>我们通过 IRIS Wilber 系统申请了波形数据，即文件 <code>example/20080418093658/20080418093658.seed</code>，seed 文件包含了波形记录和仪器响应。
+在 <code>example/20080418093658/</code> 下还有一个 <code>info</code> 文件：</p>
+<pre><code>2008-04-18T09:36:58 38.4584 -87.8398 15.8 5.4
+</code></pre>
+<p>含义为：发震时刻、震中纬度、经度、震源深度和震级。</p>
+<p>也就是说这里的 seed 文件和文件 <code>info</code> 就包含了需要的全部信息。下面说明数据预处理的各个步骤。</p>
+<h2 id="_3">数据的处理</h2>
+<p>数据的处理是通过运行 <code>example/</code> 下的脚本 <code>process.pl</code> 来完成的：</p>
+<pre><code>perl process.pl 20080418093658
+</code></pre>
+<p>其中，参数 20080418093658 就是指的相应路径。<code>process.pl</code> 运行后会依次调用其他脚本，并把这个路径传递给相应脚本，下面依次说明各脚本做了什么。</p>
+<h3 id="rdseedpl">rdseed.pl</h3>
+<p><code>rdseed.pl</code> 依次做以下三件事：</p>
+<ol>
+<li>从事件路径下所有 seed 文件中提取出 SAC 文件和 RESP 文件</li>
+<li>如果某台站的数据因故分割为了多个，则进行合并</li>
+<li>将 SAC 文件名重命名为 <code>NET.STATION.LOCCAL.CHANNEL.SAC</code> 的形式</li>
+</ol>
+<h3 id="eventinfopl">eventinfo.pl</h3>
+<p><code>eventinfo.pl</code> 同步所有 SAC 文件的参考时刻，并读取文件 <code>info</code>，把事件信息写入 SAC 文件。</p>
+<h3 id="marktimepl">marktime.pl</h3>
+<p><code>marktime.pl</code> 根据事件信息和台站位置，把 Pnl 波的理论到时写进 SAC 文件的头段变量 T0 中。
+这一步，依赖于外部程序 taup。标记理论到时并不是必须的，这个问题会在反演部分再详细说明。</p>
+<h3 id="transferpl">transfer.pl</h3>
+<p><code>transfer</code> 依次做以下三件事：</p>
+<ol>
+<li>去毛刺、去均值、去线性趋势和波形尖灭</li>
+<li>去仪器响应，使 y 轴表示速度</li>
+<li>改单位由默认的 nm/s 为 cm/s</li>
+</ol>
+<h3 id="rotatepl">rotate.pl</h3>
+<p><code>rotate.pl</code> 将所有台站的三分量转到大圆路径。</p>
+<h3 id="resamplepl">resample.pl</h3>
+<p><code>resample.pl</code> 对数据进行重采样。<code>resample.pl</code> 需要重采样的采样周期为参数，这里我们使用的是 0.2s。
+需要强调的是，所有 SAC 文件的采样周期必须相同，并且要和之后计算格林函数时的参数 dt 相同。这一点是程序设计的要求。</p></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
+        <script src="../site/js/base.js"></script>
+        <script src="../site/js/bootstrap-3.0.3.min.js"></script>
+        <script src="../site/js/highlight.pack.js"></script>
+        <script src="../site/js/jquery-1.10.2.min.js"></script>
+        <script src="../site/mkdocs/js/lunr-0.5.7.min.js"></script>
+        <script src="../site/mkdocs/js/mustache.min.js"></script>
+        <script src="../site/mkdocs/js/require.js"></script>
+        <script src="../site/mkdocs/js/search.js"></script>
+        <script src="../site/mkdocs/js/text.js"></script>
+        <script src="../site/site/js/base.js"></script>
+        <script src="../site/site/js/bootstrap-3.0.3.min.js"></script>
+        <script src="../site/site/js/highlight.pack.js"></script>
+        <script src="../site/site/js/jquery-1.10.2.min.js"></script>
+        <script src="../site/site/mkdocs/js/lunr-0.5.7.min.js"></script>
+        <script src="../site/site/mkdocs/js/mustache.min.js"></script>
+        <script src="../site/site/mkdocs/js/require.js"></script>
+        <script src="../site/site/mkdocs/js/search.js"></script>
+        <script src="../site/site/mkdocs/js/text.js"></script>
+        <script src="../site/site/site/js/base.js"></script>
+        <script src="../site/site/site/js/bootstrap-3.0.3.min.js"></script>
+        <script src="../site/site/site/js/highlight.pack.js"></script>
+        <script src="../site/site/site/js/jquery-1.10.2.min.js"></script>
+        <script src="../site/site/site/mkdocs/js/lunr-0.5.7.min.js"></script>
+        <script src="../site/site/site/mkdocs/js/mustache.min.js"></script>
+        <script src="../site/site/site/mkdocs/js/require.js"></script>
+        <script src="../site/site/site/mkdocs/js/search.js"></script>
+        <script src="../site/site/site/mkdocs/js/text.js"></script>
+        <script src="../site/site/site/site/js/base.js"></script>
+        <script src="../site/site/site/site/js/bootstrap-3.0.3.min.js"></script>
+        <script src="../site/site/site/site/js/highlight.pack.js"></script>
+        <script src="../site/site/site/site/js/jquery-1.10.2.min.js"></script>
+        <script src="../site/site/site/site/mkdocs/js/lunr-0.5.7.min.js"></script>
+        <script src="../site/site/site/site/mkdocs/js/mustache.min.js"></script>
+        <script src="../site/site/site/site/mkdocs/js/require.js"></script>
+        <script src="../site/site/site/site/mkdocs/js/search.js"></script>
+        <script src="../site/site/site/site/mkdocs/js/text.js"></script>
+        <script src="../site/site/site/site/site/js/base.js"></script>
+        <script src="../site/site/site/site/site/js/bootstrap-3.0.3.min.js"></script>
+        <script src="../site/site/site/site/site/js/highlight.pack.js"></script>
+        <script src="../site/site/site/site/site/js/jquery-1.10.2.min.js"></script>
+        <script src="../site/site/site/site/site/mkdocs/js/lunr-0.5.7.min.js"></script>
+        <script src="../site/site/site/site/site/mkdocs/js/mustache.min.js"></script>
+        <script src="../site/site/site/site/site/mkdocs/js/require.js"></script>
+        <script src="../site/site/site/site/site/mkdocs/js/search.js"></script>
+        <script src="../site/site/site/site/site/mkdocs/js/text.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
