@@ -23,10 +23,6 @@
         <link href="../site/site/css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../site/site/css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../site/site/css/highlight.css" rel="stylesheet">
-        <link href="../site/site/site/css/base.css" rel="stylesheet">
-        <link href="../site/site/site/css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../site/site/site/css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="../site/site/site/css/highlight.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -103,21 +99,6 @@
                     </li>
                 
                 
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">其他 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../compare/">代码差异</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
                 </ul>
             
 
@@ -180,13 +161,13 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="oh-my-cap">Oh My CAP 的安装</h1>
-<p>以下安装步骤在 CentOS 上验证通过。在其他 Linux 发行版及 Mac 上安装步骤类似。
-因为 gCAP 依赖的 SAC 几乎不可能在 Windows 上安装，所以本安装指南不适用于 Windows。</p>
+<h2 id="oh-my-cap">Oh My CAP 的安装</h2>
+<p>我们已经在 centos 上验证了下面的安装步骤，在 Linux 和 Mac 上安装应该都是没有问题的。
+因为 gCAP 依赖的 SAC 几乎不可能在 Windows 上安装，所以本安装指南不受用于 Windows。</p>
 <p>gCAP 依赖 SAC、GMT、fk 和 pssac。其次，要完成一系列的编译需要 gcc 和其他辅助的编译工具。
 下面的操作请依序完成：</p>
-<h2 id="gcc">gcc 和其他辅助的编译工具</h2>
-<h3 id="centos">CentOS:</h3>
+<h3 id="gcc">gcc 和其他辅助的编译工具</h3>
+<h4 id="centos">Centos:</h4>
 <pre><code>sudo yum install gcc # C 编译器
 sudo yum install gcc-c++ # C++ 编译器
 sudo yum install gcc-gfortran # Fortran 编译器
@@ -195,40 +176,41 @@ sudo yum install compat-gcc-44-c++ # 兼容 gcc-c++ 4.4
 sudo yum install compat-gcc-44-gfortran # 兼容 gcc-fortran 4.4
 sudo yum install compat-libf2c-34 # g77 3.4.x 兼容库
 sudo yum install make
+sudo yum install gdb # 代码调试器
+sudo yum install cmake # Cmake
 </code></pre>
 <p>其他发行版请类似安装。请勿尝试安装 g77。gfortran 已经全面代替 g77 了。</p>
-<h2 id="sac">SAC</h2>
+<h3 id="sac">SAC</h3>
 <p>获取 SAC 的源码包或者二进制包，需要向 <a href="https://www.iris.edu/hq/">IRIS</a> 申请。在申请前建议了解<a href="https://seisman.github.io/SAC_Docs_zh/introduction/request.html">一些申请的注意事项</a>。</p>
 <p>申请地址是 <a href="http://ds.iris.edu/ds/nodes/dmc/forms/sac/">http://ds.iris.edu/ds/nodes/dmc/forms/sac/</a> 。</p>
 <p>在获得源码包或者二进制包后，按照 SAC 参考手册的相关内容进行安装：</p>
 <p><a href="https://seisman.github.io/SAC_Docs_zh/introduction/linux-install.html">SAC 在 Linux 上的安装</a></p>
 <p><a href="https://seisman.github.io/SAC_Docs_zh/introduction/mac-install.html">SAC 在 Mac 上的安装</a></p>
-<h2 id="gmt">GMT</h2>
+<h3 id="gmt">GMT</h3>
 <p>GMT 应该安装 GMT4。GMT4 和 GMT5 是可以共存在电脑上的，所以安装 GMT4 不影响 GMT5 的使用：</p>
 <p><a href="https://seisman.info/install-gmt4-under-linux.html">GMT 4 在 Linux 上的安装</a></p>
 <p><a href="https://seisman.info/install-gmt4-under-mac.html">GMT 4 在 Mac 上的安装</a></p>
 <p><a href="https://seisman.info/multiple-versions-of-gmt.html">GMT4 与 GMT5 双版本共存</a></p>
-<h2 id="fk">fk</h2>
+<h3 id="fk">fk</h3>
 <p>fk 的安装文件，我们已经打包好了，你不需要再去其他地方下载，进入 <code>/path/to/oh-my-cap/src/fk</code> 目录，输入命令进行编译:</p>
 <pre><code>$ make
 </code></pre>
-<h2 id="pssac">pssac</h2>
+<h3 id="pssac">pssac</h3>
 <p>pssac 的安装文件，我们已经打包好了，你不需要再去其他地方下载，进入 <code>/path/to/oh-my-cap/src/pssac</code> 目录，输入命令进行编译:</p>
 <pre><code>$ make
 </code></pre>
-<h2 id="gcap">gCAP</h2>
+<h3 id="gcap">gCAP</h3>
 <p>在完成上面的项目后，才可以着手编译 gCAP 。</p>
-<p>gCAP 使用了商业软件 Numerical Recipes（简称 NR）中的一些子函数，
-包括 <code>matrix</code> 、 <code>free_matrix</code> 、 <code>free_convert_matrix</code> 、 <code>jacobi</code> 和 <code>eigsrt</code> 。
-由于版权原因，这几个子函数的源码并没有包含在本项目中。
-用户应自行获取这几个子函数的源文件，并将其放到 <code>/path/to/oh-my-cap/src/gcap</code> 下，
-再在该目录下进行编译:</p>
+<p>gCAP 需要使用付费的 Numerical Recipes（简称 NR）中的一些函数，
+包括 matrix 、 free_matrix 、 free_convert_matrix 、 jacobi 和 eigsrt 。
+本网站的数据是放在 github 上的，我们无法说服自己在开源社区不尊重版权，所以这里不提供这 5 个函数。
+在把这 5 个函数的文件放到 <code>/path/to/oh-my-cap/src/gcap</code> 下之后，再在该目录下进行编译:</p>
 <pre><code>$ make
 </code></pre>
-<h2 id="_1">添加环境变量</h2>
+<h3 id="_1">添加环境变量</h3>
 <p>需要为 fk、pssac 和 gcap 添加环境变量。将以下内容加入环境变量中:</p>
-<pre><code># 注意将 /path/to/oh-my-cap 修改为 oh-my-cap 实际的绝对路径!
-export OH_MY_CAP=/path/to/oh-my-cap
+<pre><code>export OH_MY_CAP=/path/to/oh-my-cap
+# =号后面的内容应该换成oh-my-cap实际的路径!
 export PATH=${PATH}:$OH_MY_CAP/src/fk
 export PATH=${PATH}:$OH_MY_CAP/src/pssac
 export PATH=${PATH}:$OH_MY_CAP/src/gcap
@@ -266,15 +248,6 @@ export PATH=${PATH}:$OH_MY_CAP/src/gcap
         <script src="../site/site/mkdocs/js/require.js"></script>
         <script src="../site/site/mkdocs/js/search.js"></script>
         <script src="../site/site/mkdocs/js/text.js"></script>
-        <script src="../site/site/site/js/base.js"></script>
-        <script src="../site/site/site/js/bootstrap-3.0.3.min.js"></script>
-        <script src="../site/site/site/js/highlight.pack.js"></script>
-        <script src="../site/site/site/js/jquery-1.10.2.min.js"></script>
-        <script src="../site/site/site/mkdocs/js/lunr-0.5.7.min.js"></script>
-        <script src="../site/site/site/mkdocs/js/mustache.min.js"></script>
-        <script src="../site/site/site/mkdocs/js/require.js"></script>
-        <script src="../site/site/site/mkdocs/js/search.js"></script>
-        <script src="../site/site/site/mkdocs/js/text.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
             <div class="modal-dialog">
