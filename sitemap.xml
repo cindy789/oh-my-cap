@@ -3,60 +3,24 @@
 
     
     <url>
-     <loc>https://wangliang1989.github.com/oh-my-cap/</loc>
-     <lastmod>2016-10-17</lastmod>
+     <loc>https://wangliang.one/oh-my-cap//</loc>
+     <lastmod>2016-10-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>https://wangliang1989.github.com/oh-my-cap/install/</loc>
-     <lastmod>2016-10-17</lastmod>
+     <loc>https://wangliang.one/oh-my-cap//install/</loc>
+     <lastmod>2016-10-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>https://wangliang1989.github.com/oh-my-cap/quick-start/</loc>
-     <lastmod>2016-10-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-        
-    <url>
-     <loc>https://wangliang1989.github.com/oh-my-cap/intro-to-procedures/</loc>
-     <lastmod>2016-10-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://wangliang1989.github.com/oh-my-cap/gflib/</loc>
-     <lastmod>2016-10-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://wangliang1989.github.com/oh-my-cap/preprocess/</loc>
-     <lastmod>2016-10-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://wangliang1989.github.com/oh-my-cap/inversion/</loc>
-     <lastmod>2016-10-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-    <url>
-     <loc>https://wangliang1989.github.com/oh-my-cap/parameter/</loc>
-     <lastmod>2016-10-17</lastmod>
+     <loc>https://wangliang.one/oh-my-cap//quick-start/</loc>
+     <lastmod>2016-10-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -64,8 +28,26 @@
     
         
     <url>
-     <loc>https://wangliang1989.github.com/oh-my-cap/compare/</loc>
-     <lastmod>2016-10-17</lastmod>
+     <loc>https://wangliang.one/oh-my-cap//intro-to-procedures/</loc>
+     <lastmod>2016-10-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://wangliang.one/oh-my-cap//gflib/</loc>
+     <lastmod>2016-10-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://wangliang.one/oh-my-cap//preprocess/</loc>
+     <lastmod>2016-10-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://wangliang.one/oh-my-cap//inversion/</loc>
+     <lastmod>2016-10-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -73,8 +55,26 @@
 
     
     <url>
-     <loc>https://wangliang1989.github.com/oh-my-cap/FAQs/</loc>
-     <lastmod>2016-10-17</lastmod>
+     <loc>https://wangliang.one/oh-my-cap//parameter/</loc>
+     <lastmod>2016-10-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>https://wangliang.one/oh-my-cap//code-diffs/</loc>
+     <lastmod>2016-10-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>https://wangliang.one/oh-my-cap//FAQs/</loc>
+     <lastmod>2016-10-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

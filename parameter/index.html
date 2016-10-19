@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="wangliang1989">
-        <link rel="canonical" href="https://wangliang1989.github.com/oh-my-cap/parameter/">
+        <link rel="canonical" href="https://wangliang.one/oh-my-cap/parameter/">
         <link rel="shortcut icon" href="../img/favicon.ico">
 
 	<title>反演参数 - Oh My CAP</title>
@@ -15,22 +15,6 @@
         <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../css/highlight.css">
-        <link href="../site/css/base.css" rel="stylesheet">
-        <link href="../site/css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../site/css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="../site/css/highlight.css" rel="stylesheet">
-        <link href="../site/site/css/base.css" rel="stylesheet">
-        <link href="../site/site/css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../site/site/css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="../site/site/css/highlight.css" rel="stylesheet">
-        <link href="../site/site/site/css/base.css" rel="stylesheet">
-        <link href="../site/site/site/css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../site/site/site/css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="../site/site/site/css/highlight.css" rel="stylesheet">
-        <link href="../site/site/site/site/css/base.css" rel="stylesheet">
-        <link href="../site/site/site/site/css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../site/site/site/site/css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="../site/site/site/site/css/highlight.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -132,7 +116,7 @@
                         
                             
 <li >
-    <a href="../compare/">代码差异</a>
+    <a href="../code-diffs/">代码差异</a>
 </li>
 
                         
@@ -162,7 +146,7 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../compare/">
+                        <a rel="prev" href="../code-diffs/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -187,48 +171,84 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#_1">反演参数</a></li>
+        <li class="main active"><a href="#cap">CAP 反演参数</a></li>
         
-            <li><a href="#_2">参数使用</a></li>
+            <li><a href="#_1">语法</a></li>
         
-            <li><a href="#_3">参数含义</a></li>
+            <li><a href="#_2">各参数含义</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="_1">反演参数</h1>
-<h2 id="_2">参数使用</h2>
-<pre><code>cap.pl -Mmodel_depth/mag [-B] [-C&lt;f1_pnl/f2_pnl/f1_sw/f2_sw&gt;] [-D&lt;w1/p1/p2&gt;] [-F&lt;thr&gt;] [-Ggreen] [-Hdt] [-Idd[/dm]] [-J[iso[/diso[/clvd[/dclvd]]]]] [-Kvpvs[/mu]] [-L&lt;tau&gt;] [-N&lt;n&gt;] [-O] [-P[&lt;Yscale[/Xscale[/k]]]&gt;] [-Qnof] [-R&lt;strike1/strike2/dip1/dip2/rake1/rake2&gt;] [-S&lt;s1/s2[/tie]&gt;] [-T&lt;m1/m2&gt;] [-V&lt;vp/vl/vr&gt;] [-Udirct] [-Wi] [-Xn] [-Zstring] event_dirs
+<h1 id="cap">CAP 反演参数</h1>
+<h2 id="_1">语法</h2>
+<pre><code>cap.pl -Mmodel_depth/mag [-B] [-C&lt;f1_pnl/f2_pnl/f1_sw/f2_sw&gt;] [-D&lt;w1/p1/p2&gt;] [-F&lt;thr&gt;] [-Ggreen] [-Hdt]
+    [-Idd[/dm]] [-J[iso[/diso[/clvd[/dclvd]]]]] [-Kvpvs[/mu]] [-L&lt;tau&gt;] [-N&lt;n&gt;] [-O]
+    [-P[&lt;Yscale[/Xscale[/k]]]&gt;] [-Qnof] [-R&lt;strike1/strike2/dip1/dip2/rake1/rake2&gt;] [-S&lt;s1/s2[/tie]&gt;]
+    [-T&lt;m1/m2&gt;] [-V&lt;vp/vl/vr&gt;] [-Udirct] [-Wi] [-Xn] [-Zstring] event_dirs
 </code></pre>
-<p>event_dirs 是事件的路径。[]内为可选参数，/是输入参数的分隔符，&lt; &gt;在实际使用中不要键入，这里是为了表明其含义。</p>
-<h2 id="_3">参数含义</h2>
-<h3 id="-c">-C</h3>
-<p>针对 Pnl 和面波的带通滤波器，由其拐角频限定，默认值是 0.02/0.2/0.02/0.1。</p>
-<h3 id="-ggreen">-Ggreen</h3>
-<p>格林函数库的位置，如果格林函数库不在 <code>Glib/</code> 下，才需要用此参数特别指定。</p>
-<h3 id="-hdt">-Hdt</h3>
-<p>dt 的值。再次强调 dt 必须和 SAC 文件的头段 delta、计算格林函数的参数 dt 保持相等。如果这三者不相等，那么计算结果是错误的。这一点是程序设计的要求。</p>
-<h3 id="-idd">-Idd</h3>
-<p>搜索步长，默认值是 10/0.1，表示 strike、dip、rake 按 10 度为步长来搜索，震级为0.1来搜索。</p>
-<h3 id="-mmodel_depthmag">-Mmodel_depth/mag</h3>
-<p>指定格林函数，-Mhk_15/5.0表示 hk 模型、深度15公里 和 初始震级 5.0。</p>
-<h3 id="-pyscalexscalek">-P[&lt;Yscale[/Xscale[/k]]</h3>
-<p>绘图参数,Yscale: 第一道的振幅长度，单位 inch。Xscale: 每 inch 的事件长度 append k if one wants to keep those</p>
-<h3 id="-r">-R<strike1/strike2/dip1/dip2/rake1/rake2></h3>
-<p>网格搜索的范围，按照 strike/dip/rake，默认值是 0/360/0/90/-90/90</p>
-<h3 id="-s">-S<s1/s2[/tie]></h3>
-<p>Pnl 和面波的最大时间偏移，SH 偏移与 SV 偏移之间的联系(tie)。tie = 0，表示 SV 和 SH 偏移相互独立。tie = 0.5，表示强制令 SH 和 SV 偏移相同，默认值是 0.5。
-如 -S5/10/0 表示 Pnl波最多可以偏移 5 秒，面波可以偏移 10 秒，SV 和 SH 的偏移相互独立。</p>
-<h3 id="-t">-T<m1/m2></h3>
-<p>Pnl 和面波的最大时窗长度，如果确定时窗是用的方法 3 ，则此参数非常重要。</p>
-<h3 id="-v">-V<vp/vl/vr></h3>
-<p>Pnl、Love 和 Rayleigh 波的视速度，缺省值为 off，如果确定时窗是用方法 2，则此参数非常重要。</p>
-<h3 id="-wi">-Wi</h3>
-<p>1 表示用的是速度，2 表示用的是位移。</p>
-<h3 id="-zstring">-Zstring</h3>
-<p>指定不同的权重文件名，默认值是 weight.dat</p></div>
+<p><code>event_dirs</code> 是事件的路径。<code>[]</code> 代表该参数为可选参数， <code>/</code> 是多个参数的分隔符， <code>&lt; &gt;</code> 在实际使用中不要键入，这里是为了表明其含义。</p>
+<h2 id="_2">各参数含义</h2>
+<h3 id="-cf1_pnlf2_pnlf1_swf2_sw"><code>-C&lt;f1_pnl&gt;/&lt;f2_pnl&gt;/&lt;f1_sw&gt;/&lt;f2_sw&gt;</code></h3>
+<p>为 Pnl 和面波分别指定一个带通滤波器。默认值是 <code>0.02/0.2/0.02/0.1</code>，即默认将 Pnl 滤波到0.02到0.2 Hz，将面波滤波到0.02到0.1 Hz。</p>
+<h3 id="-ggreen"><code>-G&lt;green&gt;</code></h3>
+<p>格林函数库的路径。如果格林函数库不在 <code>Glib/</code> 下，才需要用此参数特别指定。</p>
+<h3 id="-hdt"><code>-H&lt;dt&gt;</code></h3>
+<p>采样周期。需要注意： <code>&lt;dt&gt;</code> 必须和 SAC 文件的头段 delta、计算格林函数的参数 dt 保持相等。如果这三者不相等，那么计算结果是错误的。这一点是程序设计的要求。</p>
+<h3 id="-idddm"><code>-I&lt;dd&gt;/[&lt;dm&gt;]</code></h3>
+<p>strike/dip/rake以及震级的搜索步长。默认值为 10/0.1，表示 strike、dip、rake 按 10 度为步长来搜索，震级为0.1来搜索。</p>
+<h3 id="-jisodisoclvddclvd"><code>-J[&lt;iso&gt;[/&lt;diso&gt;[/&lt;clvd&gt;[/&lt;dclvd&gt;]]]]</code></h3>
+<p>若不使用该选项，则只搜索双力偶解。加上该选项，则搜索完整的地震矩解。四个参数分别表示 ISO 分量的初始值以及步长、CLVD分量的初始值以及步长。</p>
+<h3 id="-kvpvsmu"><code>-K&lt;vpvs&gt;[/&lt;mu&gt;]</code></h3>
+<p>使用震源处的 Vp/Vs 比以及剪切模块来计算 potency tensor parameters <code>ISO</code> 和 <code>P0</code></p>
+<h3 id="-ldura"><code>-L&lt;dura&gt;</code></h3>
+<p>指定震源函数的持续时间。</p>
+<ul>
+<li>若不使用该选项，则根据初始震级自动估计震源持续时间</li>
+<li>若 <code>-L</code> 选项后接一数字，则将该数字作为震源持续时间</li>
+<li>若 <code>-L</code> 选项后接一 SAC 文件名，则将该 SAC 文件作为震源时间函数</li>
+</ul>
+<h3 id="-mmodel_depthmag"><code>-M&lt;model&gt;_&lt;depth&gt;/&lt;mag&gt;</code></h3>
+<p>指定格林函数以及初始震级。例如， <code>-Mmodel_15/5.0</code> 表示使用 model 模型在震源深度为 15 km 处的格林函数，震源初始震级为 5.0。</p>
+<h3 id="-nn"><code>-N&lt;n&gt;</code></h3>
+<p>重复反演 n 次，每次从中剔除一些坏的波形数据。</p>
+<h3 id="-o"><code>-O</code></h3>
+<p>若使用 <code>-O</code> 选项，则不会执行 cap 反演而是将传递给 cap 的参数输出到终端。该选项常用于调试。</p>
+<h3 id="-pyscalexscalek"><code>-P[&lt;Yscale&gt;[/&lt;Xscale&gt;[/k]]</code></h3>
+<p>绘制波形对比图，并指定波形的缩放比例。</p>
+<ul>
+<li><code>&lt;Yscale&gt;</code> 指定了第一个波形的高度，单位为 inch</li>
+<li><code>&lt;Xscale&gt;</code> 指定了图上每英寸所代表的波形秒数</li>
+<li>若加上 <code>k</code> 则会保留所有绘图时所使用的临时波形文件，包括警告滤波和截窗的观测数据，以及最优机制解下的理论合成数据</li>
+</ul>
+<h3 id="-rstrike1strike2dip1dip2rake1rake2"><code>-R&lt;strike1&gt;/&lt;strike2&gt;/&lt;dip1&gt;/&lt;dip2&gt;/&lt;rake1&gt;/&lt;rake2&gt;</code></h3>
+<p>strike、dip和rake的搜索范围。默认值是 <code>0/360/0/90/-90/90</code>，即搜索所有可能解</p>
+<h3 id="-ss1s2tie"><code>-S&lt;s1&gt;/&lt;s2&gt;[/&lt;tie&gt;]</code></h3>
+<ul>
+<li><code>&lt;s1&gt;</code> Pnl 所能允许的最大时间偏移量</li>
+<li><code>&lt;s2&gt;</code> 面波所能允许的最大时间偏移量</li>
+<li><code>&lt;tie&gt;</code> SH 与 SV 偏移量之间的关联性，默认值是 0.5<ul>
+<li><code>tie=0</code> 表示 SV 和 SH 的偏移量相互独立</li>
+<li><code>tie=0.5</code> 表示强制令 SH 和 SV 偏移相同</li>
+</ul>
+</li>
+</ul>
+<p>如 <code>-S5/10/0</code> 表示 Pnl波最多可以偏移 5 s，面波可以偏移 10 s，SV 和 SH 的偏移相互独立。</p>
+<h3 id="-tm1m2"><code>-T&lt;m1&gt;/&lt;m2&gt;</code></h3>
+<p>Pnl 和面波的最大时窗长度，默认值为 <code>35/70</code> 。如果使用方法3确定时窗，则必须指定该选项。</p>
+<h3 id="-udirec"><code>-U&lt;direc&gt;</code></h3>
+<p>使用该选项，则会考虑断层破裂方向对波形的影响， <code>&lt;direc&gt;</code> 为断层面上的破裂方向。</p>
+<h3 id="-vvpvlvr"><code>-V&lt;vp&gt;/&lt;vl&gt;/&lt;vr&gt;</code></h3>
+<p>Pnl、Love 和 Rayleigh 波的视速度。如果使用方法2确定时窗，则必须指定该选项。</p>
+<h3 id="-wi"><code>-W&lt;i&gt;</code></h3>
+<p><code>-W1</code> 表示观测波形数据为速度记录， <code>-W2</code> 表示观测波形数据为位移记录。</p>
+<h3 id="-xn"><code>-X&lt;n&gt;</code></h3>
+<p>若使用该选项，则会输出其他满足 <code>misfit-min&lt;n*sigma</code> 的局部极小值解</p>
+<h3 id="-zstring"><code>-Z&lt;string&gt;</code></h3>
+<p>默认权重文件名为 <code>weight.dat</code>，使用该选项可以指定使用其他权重文件。</p>
+<h3 id="-b-d-f-q"><code>-B, -D, -F, -Q</code></h3></div>
             
         </div>
 
@@ -244,42 +264,6 @@
         <script>var base_url = '..';</script>
         <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
         <script src="../js/base.js"></script>
-        <script src="../site/js/base.js"></script>
-        <script src="../site/js/bootstrap-3.0.3.min.js"></script>
-        <script src="../site/js/highlight.pack.js"></script>
-        <script src="../site/js/jquery-1.10.2.min.js"></script>
-        <script src="../site/mkdocs/js/lunr-0.5.7.min.js"></script>
-        <script src="../site/mkdocs/js/mustache.min.js"></script>
-        <script src="../site/mkdocs/js/require.js"></script>
-        <script src="../site/mkdocs/js/search.js"></script>
-        <script src="../site/mkdocs/js/text.js"></script>
-        <script src="../site/site/js/base.js"></script>
-        <script src="../site/site/js/bootstrap-3.0.3.min.js"></script>
-        <script src="../site/site/js/highlight.pack.js"></script>
-        <script src="../site/site/js/jquery-1.10.2.min.js"></script>
-        <script src="../site/site/mkdocs/js/lunr-0.5.7.min.js"></script>
-        <script src="../site/site/mkdocs/js/mustache.min.js"></script>
-        <script src="../site/site/mkdocs/js/require.js"></script>
-        <script src="../site/site/mkdocs/js/search.js"></script>
-        <script src="../site/site/mkdocs/js/text.js"></script>
-        <script src="../site/site/site/js/base.js"></script>
-        <script src="../site/site/site/js/bootstrap-3.0.3.min.js"></script>
-        <script src="../site/site/site/js/highlight.pack.js"></script>
-        <script src="../site/site/site/js/jquery-1.10.2.min.js"></script>
-        <script src="../site/site/site/mkdocs/js/lunr-0.5.7.min.js"></script>
-        <script src="../site/site/site/mkdocs/js/mustache.min.js"></script>
-        <script src="../site/site/site/mkdocs/js/require.js"></script>
-        <script src="../site/site/site/mkdocs/js/search.js"></script>
-        <script src="../site/site/site/mkdocs/js/text.js"></script>
-        <script src="../site/site/site/site/js/base.js"></script>
-        <script src="../site/site/site/site/js/bootstrap-3.0.3.min.js"></script>
-        <script src="../site/site/site/site/js/highlight.pack.js"></script>
-        <script src="../site/site/site/site/js/jquery-1.10.2.min.js"></script>
-        <script src="../site/site/site/site/mkdocs/js/lunr-0.5.7.min.js"></script>
-        <script src="../site/site/site/site/mkdocs/js/mustache.min.js"></script>
-        <script src="../site/site/site/site/mkdocs/js/require.js"></script>
-        <script src="../site/site/site/site/mkdocs/js/search.js"></script>
-        <script src="../site/site/site/site/mkdocs/js/text.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
             <div class="modal-dialog">
