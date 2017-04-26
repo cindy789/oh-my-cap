@@ -87,7 +87,7 @@ CAP 会把完整的波形记录切割成两个时间窗口：Pnl 和面波窗口
 执行以上命令后，会看到如下输出：
 
     20080418093658 15 1
-    Warning: flag=21 => the minimum 295.5/90.0/  1.4 is at boundary
+    Warning: flag=21 => the minimum 295.1/90.0/  1.7 is at boundary
     inversion done
 
 第二行的警告是因为 NM_MPH 台的位置很特殊，刚好在节面上，可以打开 sac，看看这个台的波形可以看到其 P 波非常弱。可以将权重文件中 NM_MPH 台的五个权重全部改为 0，警告就会消失。如果没有看到第三行 inversion done 这样的提示，说明并没有进行反演，多半是因为忘记生成了权重文件。
